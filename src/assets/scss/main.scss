@@ -1,0 +1,36 @@
+// variables
+$white: #ffffff;
+$black: #000000;
+$light-grey: #f5f5f2;
+$dark-grey: #444343;
+$font-Roboto: 'Roboto', sans-serif;
+//mixins
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+//helpers
+@import "helpers/media-queries";
+// sections
+@import "sections/filter";
+@import "sections/content";
+//blocks
+//common styles
+* {
+  box-sizing: border-box;
+}
+h1 {
+  position: absolute;
+  text-indent: -9999px;
+}
+body {
+  font-family: $font-Roboto;
+  color: $black;
+  font-size: 13px;
+}
+.container {
+  margin: 0 auto;
+  padding: 30px;
+  @include tablet-min {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+}
