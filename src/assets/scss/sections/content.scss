@@ -3,13 +3,91 @@
     margin-left: 25px;
     margin-top: 50px;
   }
-  &__list {
+  &__list, &__sublist {
     list-style-type: none;
     padding-left: 0;
+    display: inline-block;
   }
   &__item {
     padding: 15px 25px 15px 10px;
+    margin-bottom: 10px;
     border: 1px solid $light-grey;
     border-radius: 5px;
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.23rem;//16px
+    font-weight: 400;
+    color: $blue;
+    @include tablet-min {
+      line-height: 1.875;
+    }
+  }
+  &__sublist {
+    margin-left: -10px;
+  }
+  &__subitem {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    padding-right: 10px;
+    text-transform: capitalize;
+    &.separated {
+      border-right: 1px solid $grey;
+    }
+    &__description {
+      color: $grey;
+    }
+    &__tab {
+      display: inline-block;
+      padding: 10px;
+      background-color: $light-grey;
+      border-radius: 2px;
+      text-transform: none;
+      color: $grey;
+    }
+    &__reference {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &__raiting {
+      position: relative;
+      font-weight: 500;
+      &::after {
+        position: absolute;
+        display: block;
+        left: 20px;
+        top: 0;
+        // transform: translate3d(0, 50%, 0);
+        width: 72px;
+        height: 13px;
+        background-image: url('../img/stars.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        content: '';
+      }
+    }
+  }
+  &__subitem > &__sublist {
+    margin-left: 0;
+    display: inline;
+  }
+  &__description {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    &__text {
+      line-height: 1.5;
+    }
+    &__reference {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
