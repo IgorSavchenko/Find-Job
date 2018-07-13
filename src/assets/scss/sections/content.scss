@@ -54,7 +54,7 @@
         text-decoration: underline;
       }
     }
-    &__raiting {
+    &__rating {
       position: relative;
       font-weight: 500;
       &::after {
@@ -62,7 +62,6 @@
         display: block;
         left: 20px;
         top: 0;
-        // transform: translate3d(0, 50%, 0);
         width: 72px;
         height: 13px;
         background-image: url('../img/stars.png');
